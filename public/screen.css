@@ -19,3 +19,18 @@ header {
 h2 {
   color: #7a542e;
 }
+main {
+  padding-top: 5rem;
+  display: flex;
+
+  justify-content: space-evenly;
+}
+h2 {
+  padding-top: 5rem;
+  align-items: center;
+  text-align: center;
+}
+fieldset {
+  display: flex;
+  flex-direction: column;
+}
