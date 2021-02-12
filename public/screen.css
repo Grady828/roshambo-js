@@ -33,4 +33,5 @@ h2 {
 fieldset {
   display: flex;
   flex-direction: column;
+  border: none;
 }
