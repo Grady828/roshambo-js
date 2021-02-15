@@ -4,27 +4,115 @@ let Player2Choice = ''
 function player1ChoosesRock() {
   Player1Choice = 'rock'
   console.log(Player1Choice)
+  whoWins()
 }
 function player1ChoosesScissors() {
   Player1Choice = 'scissors'
   console.log(Player1Choice)
+  whoWins()
 }
 function player1ChoosesPaper() {
   Player1Choice = 'paper'
   console.log(Player1Choice)
+  whoWins()
 }
 function player2ChoosesRock() {
-  Player1Choice = 'rock'
-  console.log(Player1Choice)
+  Player2Choice = 'rock'
+  console.log(Player2Choice)
+  whoWins()
 }
 function player2ChoosesPaper() {
-  Player1Choice = 'paper'
-  console.log(Player1Choice)
+  Player2Choice = 'paper'
+  console.log(Player2Choice)
+  whoWins()
 }
 function player2ChoosesScissors() {
-  Player1Choice = 'scissors'
-  console.log(Player1Choice)
+  Player2Choice = 'scissors'
+  console.log(Player2Choice)
+  whoWins()
 }
+function player1ChoosesLizard() {
+  Player1Choice = 'lizard'
+  console.log(Player1Choice)
+  whoWins()
+}
+function player1ChoosesSpock() {
+  Player1Choice = 'spock'
+  console.log(Player1Choice)
+  whoWins()
+}
+function player2ChoosesLizard() {
+  Player2Choice = 'lizard'
+  console.log(Player2Choice)
+  whoWins()
+}
+function player2ChoosesSpock() {
+  Player2Choice = 'spock'
+  console.log(Player2Choice)
+  whoWins()
+}
+
+let whoWins = function () {
+  if (Player1Choice === '' || Player2Choice === '') return
+  if (Player1Choice === Player2Choice) {
+    return window.alert('This is a Draw')
+  }
+
+  if (Player1Choice === 'paper') {
+    if (Player2Choice === 'rock') return window.alert('Player 1 Wins!')
+    else if (Player2Choice === 'scissors') return window.alert('Player 2 Wins')
+    else if (Player2Choice === 'lizard') return window.alert('Player 2 Wins')
+    else if (Player2Choice === 'spock') return window.alert('Player 1 Wins')
+  }
+
+  if (Player1Choice === 'rock') {
+    if (Player2Choice === 'scissors') return window.alert('Player 1 Wins!')
+    else if (Player2Choice === 'paper') return window.alert('Player 2 Wins')
+    else if (Player2Choice === 'lizard') return window.alert('Player 1 Wins')
+    else if (Player2Choice === 'spock') return window.alert('Player 2 Wins')
+  }
+
+  if (Player1Choice === 'scissors') {
+    if (Player2Choice === 'paper') return window.alert('Player 1 Wins!')
+    else if (Player2Choice === 'rock') return window.alert('Player 2 Wins')
+    else if (Player2Choice === 'lizard') return window.alert('Player 1 Wins')
+    else if (Player2Choice === 'spock') return window.alert('Player 2 Wins')
+  }
+
+  if (Player1Choice === 'lizard') {
+    if (Player2Choice === 'paper') return window.alert('Player 1 Wins!')
+    else if (Player2Choice === 'rock') return window.alert('Player 2 Wins')
+    else if (Player2Choice === 'scissors') return window.alert('Player 2 Wins')
+    else if (Player2Choice === 'spock') return window.alert('Player 1 Wins')
+  }
+
+  if (Player1Choice === 'spock') {
+    if (Player2Choice === 'paper') return window.alert('Player 2 Wins!')
+    else if (Player2Choice === 'rock') return window.alert('Player 1 Wins')
+    else if (Player2Choice === 'lizard') return window.alert('Player 2 Wins')
+    else if (Player2Choice === 'scissors') return window.alert('Player 1 Wins')
+  }
+}
+
+// If player 1 chooses paper
+// And player 2 chooses rock
+// Player 1 wins
+// if (Player1Choice === 'paper' && Player2Choice === 'rock')
+//   return 'Player 1 wins!'
+//
+
+// And player 2 chooses scissors
+// Player 2 wins
+// If player 1 chose rock
+// And player 2 chose scissors
+// P1 wins
+// And player 2 chose paper
+// P2 wins
+// If player 1 chose scissors
+// And player 2 chose paper
+// P1 wins
+// And player 2 chose rock
+// P2 wins
 
 function main() {
   const p1RockButton = document
@@ -50,34 +138,25 @@ function main() {
   const p2ScissorsButton = document
     .getElementById('p2ScissorsButton')
     .addEventListener('click', player2ChoosesScissors)
+
+  const p1LizardButton = document
+    .getElementById('p1LizardButton')
+    .addEventListener('click', player1ChoosesLizard)
+
+  const p1SpockButton = document
+    .getElementById('p1SpockButton')
+    .addEventListener('click', player1ChoosesSpock)
+
+  const p2LizardButton = document
+    .getElementById('p2LizardButton')
+    .addEventListener('click', player2ChoosesLizard)
+
+  const p2SpockButton = document
+    .getElementById('p2SpockButton')
+    .addEventListener('click', player2ChoosesSpock)
   // If the players chose the same selection it is a draw
   // Call the game a draw
-  function whowins() {
-    if (Player1Choice === Player2Choice) {
-      // window.alert('Draw!')
-      return alert('This result is a tie')
-      // console.log('draw--')
-    }
-
-    // If player 1 chooses paper
-    // And player 2 chooses rock
-    // Player 1 wins
-    if (Player1Choice === 'paper' && Player2Choice === 'rock')
-      window.alert('Player 1 Wins')
-
-    // And player 2 chooses scissors
-    // Player 2 wins
-    // If player 1 chose rock
-    // And player 2 chose scissors
-    // P1 wins
-    // And player 2 chose paper
-    // P2 wins
-    // If player 1 chose scissors
-    // And player 2 chose paper
-    // P1 wins
-    // And player 2 chose rock
-    // P2 wins
-  }
 }
+console.log(whoWins(Player1Choice, Player2Choice))
 
 document.addEventListener('DOMContentLoaded', main)
