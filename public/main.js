@@ -55,42 +55,88 @@ function player2ChoosesSpock() {
 let whoWins = function () {
   if (Player1Choice === '' || Player2Choice === '') return
   if (Player1Choice === Player2Choice) {
-    return window.alert('This is a Draw')
+    window.alert('This is a Draw')
+    location.reload()
   }
 
   if (Player1Choice === 'paper') {
-    if (Player2Choice === 'rock') return window.alert('Player 1 Wins!')
-    else if (Player2Choice === 'scissors') return window.alert('Player 2 Wins')
-    else if (Player2Choice === 'lizard') return window.alert('Player 2 Wins')
-    else if (Player2Choice === 'spock') return window.alert('Player 1 Wins')
+    if (Player2Choice === 'rock') {
+      window.alert('Player 1 Wins!')
+      location.reload()
+    } else if (Player2Choice === 'scissors') {
+      window.alert('Player 2 Wins')
+      location.reload()
+    } else if (Player2Choice === 'lizard') {
+      window.alert('Player 2 Wins')
+      location.reload()
+    } else if (Player2Choice === 'spock') {
+      window.alert('Player 1 Wins')
+      location.reload()
+    }
   }
 
   if (Player1Choice === 'rock') {
-    if (Player2Choice === 'scissors') return window.alert('Player 1 Wins!')
-    else if (Player2Choice === 'paper') return window.alert('Player 2 Wins')
-    else if (Player2Choice === 'lizard') return window.alert('Player 1 Wins')
-    else if (Player2Choice === 'spock') return window.alert('Player 2 Wins')
+    if (Player2Choice === 'scissors') {
+      window.alert('Player 1 Wins!')
+      location.reload()
+    } else if (Player2Choice === 'paper') {
+      window.alert('Player 2 Wins')
+      location.reload()
+    } else if (Player2Choice === 'lizard') {
+      window.alert('Player 1 Wins')
+      location.reload()
+    } else if (Player2Choice === 'spock') {
+      window.alert('Player 2 Wins')
+      location.reload()
+    }
   }
 
   if (Player1Choice === 'scissors') {
-    if (Player2Choice === 'paper') return window.alert('Player 1 Wins!')
-    else if (Player2Choice === 'rock') return window.alert('Player 2 Wins')
-    else if (Player2Choice === 'lizard') return window.alert('Player 1 Wins')
-    else if (Player2Choice === 'spock') return window.alert('Player 2 Wins')
+    if (Player2Choice === 'paper') {
+      window.alert('Player 1 Wins!')
+      location.reload()
+    } else if (Player2Choice === 'rock') {
+      window.alert('Player 2 Wins')
+      location.reload()
+    } else if (Player2Choice === 'lizard') {
+      window.alert('Player 1 Wins')
+      location.reload()
+    } else if (Player2Choice === 'spock') {
+      window.alert('Player 2 Wins')
+      location.reload()
+    }
   }
 
   if (Player1Choice === 'lizard') {
-    if (Player2Choice === 'paper') return window.alert('Player 1 Wins!')
-    else if (Player2Choice === 'rock') return window.alert('Player 2 Wins')
-    else if (Player2Choice === 'scissors') return window.alert('Player 2 Wins')
-    else if (Player2Choice === 'spock') return window.alert('Player 1 Wins')
+    if (Player2Choice === 'paper') {
+      window.alert('Player 1 Wins!')
+      location.reload()
+    } else if (Player2Choice === 'rock') {
+      window.alert('Player 2 Wins')
+      location.reload()
+    } else if (Player2Choice === 'scissors') {
+      window.alert('Player 2 Wins')
+      location.reload()
+    } else if (Player2Choice === 'spock') {
+      window.alert('Player 1 Wins')
+      location.reload()
+    }
   }
 
   if (Player1Choice === 'spock') {
-    if (Player2Choice === 'paper') return window.alert('Player 2 Wins!')
-    else if (Player2Choice === 'rock') return window.alert('Player 1 Wins')
-    else if (Player2Choice === 'lizard') return window.alert('Player 2 Wins')
-    else if (Player2Choice === 'scissors') return window.alert('Player 1 Wins')
+    if (Player2Choice === 'paper') {
+      window.alert('Player 2 Wins!')
+      location.reload()
+    } else if (Player2Choice === 'rock') {
+      window.alert('Player 1 Wins')
+      location.reload()
+    } else if (Player2Choice === 'lizard') {
+      window.alert('Player 2 Wins')
+      location.reload()
+    } else if (Player2Choice === 'scissors') {
+      window.alert('Player 1 Wins')
+      location.reload()
+    }
   }
 }
 
